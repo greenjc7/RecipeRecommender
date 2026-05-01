@@ -1,6 +1,6 @@
 """
 Food.com Recipe Recommender — Streamlit App
-Calls the deployed Mosaic Model Serving endpoint (registered via agent.py / Lab 4 pattern).
+Calls the deployed Mosaic Model Serving endpoint.
 """
 
 import streamlit as st
@@ -40,14 +40,14 @@ with st.sidebar:
         placeholder="dapi...",
         type="password",
     )
-    # Copy this from the output of Cell 14 in the Databricks notebook
+    # Use Cell 14 output from DB notebook
     endpoint_name = st.text_input(
         "Model Serving Endpoint Name",
         value=os.getenv("SERVING_ENDPOINT", "agents_isa632_7474656346303369-greenjc7-foodcom_recipe_recommen"),
         help="Printed in Cell 14 of the Databricks notebook as 'Endpoint URL'.",
     )
     st.markdown("---")
-    st.markdown("**Source:** Food.com (Kaggle)  \n**Recipes:** 231,637  \n**Reviews:** 1,132,367")
+    st.markdown("**Source:** Food.com (Kaggle)  \n**Recipes:** 5,000 of 231,637 avaliable  \n**Reviews:** 5,000 of 1,132,367 avaliable")
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
@@ -159,7 +159,7 @@ if user_input:
 st.markdown("---")
 st.markdown(
     "<p style='text-align:center;color:#9E9E9E;font-size:0.8rem;'>"
-    "🍽️ Food.com Recipe Recommender &nbsp;|&nbsp; ISA 632 Group Project &nbsp;|&nbsp; Miami University &nbsp;|&nbsp;"
+    "🍽️ Food.com Recipe Recommender &nbsp;|&nbsp; ISA 632 Group Project &nbsp;||&nbsp; Carson Green, Taylor Martin, Billy Knapp, Gabe Bjork;|&nbsp; Miami University &nbsp;|&nbsp;"
     "<a href='https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions' target='_blank'>Kaggle Dataset</a>"
     "</p>",
     unsafe_allow_html=True,
