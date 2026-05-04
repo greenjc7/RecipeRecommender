@@ -147,7 +147,7 @@ if user_input:
 st.markdown("---")
 st.markdown(
     "<p style='text-align:center;color:#9E9E9E;font-size:0.8rem;'>"
-    "🍽️ Food.com Recipe Recommender &nbsp;|&nbsp; ISA 632 RAG Project &nbsp;|&nbsp; Miami University &nbsp;||&nbsp; Carson Green, Taylor Martin, Gabe Bjork, Billy Knapp &nbsp;|&nbsp;"
+    "🍽️ Food.com Recipe Recommender &nbsp;|&nbsp; ISA 632 RAG Project &nbsp;|&nbsp; Miami University &nbsp;|&nbsp; Carson Green, Taylor Martin, Gabe Bjork, Billy Knapp &nbsp;|&nbsp;"
     "<a href='https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions' target='_blank'>Kaggle Dataset</a>"
     "</p>",
     unsafe_allow_html=True,
