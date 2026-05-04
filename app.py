@@ -45,7 +45,7 @@ with st.sidebar:
 st.markdown("""
 <div class="header-banner">
   <h1>🍽️ Food.com Recipe Recommender</h1>
-  <p>Ask me anything — I'll find the perfect recipe from 20,000 + Food.com dishes.</p>
+  <p> Hungry? Let me help you can ask me anything and I'll find the perfect recipe from 20,000 + Food.com dishes.</p>
 </div>
 """, unsafe_allow_html=True)
 
