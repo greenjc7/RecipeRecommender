@@ -118,7 +118,7 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 # ── Chat input ────────────────────────────────────────────────────────────────
-chat_input = st.chat_input("Ask for a recipe, substitution, or anything food-related…")
+chat_input = st.chat_input("Ask for a recipe or anything food-related…")
 if chat_input:
     user_input = chat_input
 
