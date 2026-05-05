@@ -94,6 +94,21 @@ recipes_pd["description"] = recipes_pd["description"].fillna("")
 recipes_pd["avg_rating"]  = recipes_pd["avg_rating"].fillna(0.0).round(2)
 recipes_pd["name"]        = recipes_pd["name"].fillna("Unnamed Recipe")
 
+# COMMAND ----------
+
+meal_keywords = ['breakfast,', 'breakfast.', 'breakfast']
+def is_target_meal(tags_val):
+    if isinstance(tags_val, list):
+        return any(kw in tag.lower() for tag in tags_val for kw in meal_keywords)
+    if isinstance(tags_val, str):
+        return any(kw in tags_val.lower() for kw in meal_keywords)
+    return False
+
+recipes_pd = recipes_pd[recipes_pd["tags"].apply(is_target_meal)].reset_index(drop=True)
+print(f"Breakfast recipes: {len(recipes_pd):,}")
+
+# COMMAND ----------
+
 # Build embed_text — mirrors Lab 2's CONCAT of useful text fields
 def make_embed_text(row):
     return " | ".join([
