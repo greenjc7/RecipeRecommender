@@ -167,11 +167,9 @@ if "messages" not in st.session_state:
 if not st.session_state.messages:
     st.markdown('<div class="section-label">💡 Try asking</div>', unsafe_allow_html=True)
     examples = [
-        "🥞 Easy pancake recipe for beginners",
         "🥚 Quick breakfast under 15 minutes",
         "💪 High-protein breakfast meal prep",
         "🧇 What can I make with eggs and cheese?",
-        "🫐 Healthy overnight oats or granola ideas",
         "⭐ Top-rated breakfast casseroles on Food.com",
     ]
     cols = st.columns(3)
