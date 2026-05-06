@@ -166,8 +166,8 @@ if "messages" not in st.session_state:
 # ── Example prompts (only rendered when chat is empty) ───────────────────────
 if not st.session_state.messages:
     st.markdown('<div class="section-label">💡 Try asking</div>', unsafe_allow_html=True)
-    examples = [ "🥞 pancakes ideas",
-        "🫐 I have yogurt and need some ideas",
+    examples = [ "🥞 pancakes",
+        "🫐 I have yogurt and I am hungry",
         "🥚 Quick breakfast under 15 minutes",
         "💪 High-protein breakfast meal prep",
         "🧇 What can I make with eggs and cheese?",
